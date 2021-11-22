@@ -164,8 +164,9 @@ Network Trash Folder
 Temporary Items
 .apdisk
 .idea/
-# Data Folder
+# Data Folder and NSCH documents
 Data/
+NSCH_Documents/
 # Jupyter
 .ipynb_checkpoints
 # Catboost
