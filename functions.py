@@ -7,10 +7,20 @@ def metrics(y_test, predictions):
     of the labels and prints the accuracy, recall, f1, and roc auc score.
     :param y_test: True labels
     :param predictions: Predicted Labels
-    :return:
+    :return: Dictionary of scores for accuracy, recall, f2, and roc auc.
     """
-    print(f'Accuracy: {(accuracy_score(y_test, predictions)):.2f}')
-    print(f'Precision: {(precision_score(y_test, predictions)):.2f}')
-    print(f'Recall: {(recall_score(y_test, predictions)):.2f}')
-    print(f'F1: {(f1_score(y_test, predictions)):.2f}')
-    print(f'ROC AUC: {(roc_auc_score(y_test, predictions)):.2f}')
+    results = {
+        'Accuracy': accuracy_score(y_test, predictions),
+        'Precision': precision_score(y_test, predictions),
+        'Recall': recall_score(y_test, predictions),
+        'F1': f1_score(y_test, predictions),
+        'ROCAUC': roc_auc_score(y_test, predictions)  
+                      
+    }
+    print(f"Accuracy: {results['Accuracy']:.2f}")
+    print(f"Precision: {results['Precision']:.2f}")
+    print(f"Recall: {results['Recall']:.2f}")
+    print(f"F1: {results['F1']:.2f}")
+    print(f"ROC AUC: {results['ROCAUC']:.2f}")
+
+    return results
