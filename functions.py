@@ -36,6 +36,7 @@ def improvement(results1, results2):
     """
     for items in results1:
         change = results2[items] - results1[items]
+        print('Change in Results')
         if change < 0:
             print(f"{items:<15} {change:.2f}")
         else:
