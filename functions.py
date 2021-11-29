@@ -35,9 +35,10 @@ def improvement(results1, results2):
     :param results2: Metrics from new model
     :return: None
     """
+    print('Change in Results')
     for items in results1:
         change = results2[items] - results1[items]
-        print('Change in Results')
+
         if change < 0:
             print(f"{items:<15} {change:.2f}")
         else:
