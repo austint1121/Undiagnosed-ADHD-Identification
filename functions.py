@@ -17,6 +17,7 @@ def metrics(y_test, predictions):
         'ROCAUC': roc_auc_score(y_test, predictions)
 
     }
+    print('Model Results')
     print(f"Accuracy: {results['Accuracy']:.2f}")
     print(f"Precision: {results['Precision']:.2f}")
     print(f"Recall: {results['Recall']:.2f}")
