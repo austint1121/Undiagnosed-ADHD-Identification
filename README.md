@@ -141,15 +141,45 @@ I created 3 different types of models: [Sklearn decision tree](Notebooks/Modelin
 , [Catboost](Notebooks/Modeling-Catboost.ipynb), and a [Keras neural network](Notebooks/Modeling-Keras.ipynb).
 My [final model](Notebooks/Modeling-Catboost-Tuning.ipynb) is a Catboost model.
 
-For each model type, created a first simple model, and iterated from it, attempting to optimize the Recall and AUC scores.
+For each model type, created a first simple model, and iterated from it, attempting to optimize the Recall and AUC
+scores.
 
-- **Recall** because I don’t want the model to be missing kids that may have, potentially, already been passed over/ignored by doctors.
+- **Recall** because I don’t want the model to be missing kids that may have, potentially, already been passed
+  over/ignored by doctors.
 - AUC as a more general overview to how my model is doing
 
 I decided to ignore the accuracy score of this model, since I had a significant class imbalance in my target.
 
 # Results
-For my final model, I attempted to address the class imbalance issue first, using the random oversampling technique, I then used
-the [Optuna](https://optuna.readthedocs.io/en/stable/index.html) library to perform hyper parameter tuning on the model.
 
+For my final model, I attempted to address the class imbalance issue first, using the random oversampling technique, I
+then used the [Optuna](https://optuna.readthedocs.io/en/stable/index.html) library to perform hyper parameter tuning on
+the model.
 
+On the validation data:
+
+The final model has an **accuracy of 0.90** -in other words, **the model correctly classifies if a child is diagnosed
+with ADHD 90% of the time**
+
+The final model has a **precision of 0.50** —in other words, **when it predicts a child is diagnosed with ADHD, it is
+correct 50% of the time**.
+
+The final model has a **recall of 0.86** —in other words, **it correctly identifies 86% of all children diagnosed with
+ADHD**.
+
+# Conclusion
+
+This final model could be used with the survey each year, and the kids who the model flagged as having a high chance of
+undiagnosed ADHD would then have an email sent to their primary caregiver. The email could then explain that their child
+shows many similarities with those who have been diagnosed with ADHD. Resources for ADHD and recommendations on next
+steps could be included in the email as well.
+
+If the survey administrators don't want this, there is still value in this model. I've shown that it's possible to use
+machine learning to accurately identify kids with ADHD. Not only this, but I've shown it's possible to do this with just
+survey data, and if you can identify ADHD using survey data, it could be possible to identify other conditions, like
+depression, anxiety, and autism as well.
+
+Finally, I've used real data to build this model. The model has learned what kids with ADHD may look like, and has used
+that knowledge to identify others. If this were to be deployed, it could serve as a tool for those seeking answers, but
+unable to see a doctor to get an offical diagnoses. Certainly better then a quiz on a random website that has no
+scientific basis at all.
