@@ -95,19 +95,19 @@ kids diagnosed with ADHD.
 The key points I found were:
 
 - There are **4306 children** in this sample have been **diagnosed** with ADHD.
-<br>
+  <br>
 
 - **10%** of kids in this sample have been **diagnosed** ADHD.
-<br>
+  <br>
 
 - Of these kids, **69% are male**, and **31% are female**
-<br>
+  <br>
 
 - of the kids diagnosed with ADHD,
 
-  - **61%** are between the ages of **12-17**
-  - **36%** are between the ages of **6-11**
-  - **3%** are between the ages of **0-5**
+    - **61%** are between the ages of **12-17**
+    - **36%** are between the ages of **6-11**
+    - **3%** are between the ages of **0-5**
 
 - The Racial/Ethnic distribution of children with ADHD is:
 
@@ -122,16 +122,34 @@ The key points I found were:
 
 <br>
 
-#### Why These Things Matter
-
-This data is important, because my model is only as good as my data. These are some clear, defined limitations of my
-data. When modeling it will be important to remember that my model will be good at diagnosing white males between the
-ages of 12-17. This is because that is what I have the most data for. My model may struggle to correctly classify
-female, or non-white kids when it comes to ADHD. It's important to be transparent about these things, and also to
-remember that using the data as it is will mean reinforcing any bias that is already present in the data.
-
 # Data Cleaning
+
+The Data file can specifically be found [here](https://www.census.gov/programs-surveys/nsch/data/datasets.html)
+
+To prepare the data for cleaning I:
+
+- Removed columns related to ADHD
+- Ensured all NaN values present in the dataset were addressed
+- Performed a train-test split on the data and created a holdout set.
+- Saved transformed/cleaned data as CSV files.
+
+The full data cleaning notebook can be found [here](/Notebooks/Data_Cleaning.ipynb)
 
 # Modeling
 
-# Conclusion
+I created 3 different types of models: [Sklearn decision tree](Notebooks/Modeling-Decision_Tree.ipynb)
+, [Catboost](Notebooks/Modeling-Catboost.ipynb), and a [Keras neural network](Notebooks/Modeling-Keras.ipynb).
+My [final model](Notebooks/Modeling-Catboost-Tuning.ipynb) is a Catboost model.
+
+For each model type, created a first simple model, and iterated from it, attempting to optimize the Recall and AUC scores.
+
+- **Recall** because I don’t want the model to be missing kids that may have, potentially, already been passed over/ignored by doctors.
+- AUC as a more general overview to how my model is doing
+
+I decided to ignore the accuracy score of this model, since I had a significant class imbalance in my target.
+
+# Results
+For my final model, I attempted to address the class imbalance issue first, using the random oversampling technique, I then used
+the [Optuna](https://optuna.readthedocs.io/en/stable/index.html) library to perform hyper parameter tuning on the model.
+
+
