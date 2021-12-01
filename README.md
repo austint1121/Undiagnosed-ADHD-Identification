@@ -4,6 +4,40 @@ by [Matthew Turner](https://www.linkedin.com/in/matthew-turner-a5649a21b/)
 
 # Summary
 
+The [NSCH](https://www.census.gov/programs-surveys/nsch/data/datasets.html) is a household survey that produces national
+and state-level data on the physical and emotional health of children 0 - 17 years old in the United States.
+
+In the NSCH survey data is a question that asks:
+
+- Has a doctor or other health care provider EVER told you that this child has… Attention Deficit Disorder or
+  Attention-Deficit/Hyperactivity Disorder, that is, ADD or ADHD?
+
+In this project, I create a tool that can give the probability that a child from the NSCH survey has ADHD, **but is
+undiagnosed**.
+
+My [final model](Notebooks/Modeling-Catboost-Tuning.ipynb) is a Catboost model optimized on Recall and AUC score.
+
+- **Recall** because I don’t want the model to be missing kids that may have, potentially, already been passed
+  over/ignored by doctors.
+- AUC as a more general overview to how my model is doing.
+
+The final model has an **accuracy of 0.90** -in other words, **the model correctly classifies if a child is diagnosed
+with ADHD 90% of the time**
+
+The final model has a **precision of 0.50** —in other words, **when it predicts a child is diagnosed with ADHD, it is
+correct 50% of the time**.
+
+The final model has a **recall of 0.86** —in other words, **it correctly identifies 86% of all children diagnosed with
+ADHD**.
+
+This final model could be used with the survey each year, and the kids who the model flagged as having a high chance of
+undiagnosed ADHD would then have an email sent to their primary caregiver. The email could then explain that their child
+shows many similarities with those who have been diagnosed with ADHD. Resources for ADHD and recommendations on next
+steps could be included in the email as well.
+
+Please see the [project notebook](Undiagnosed-ADHD-Classification.ipynb) for a full walk through of the data science
+process throughout the entire project.
+
 # Introduction
 
 ADHD is a developmental disorder associated with an ongoing pattern of inattention, hyperactivity, and/or impulsivity.
@@ -44,8 +78,7 @@ But does a data source like that even exist?
 ## Data
 
 The [NSCH](https://www.census.gov/programs-surveys/nsch/data/datasets.html) is a household survey that produces national
-and state-level data on the physical and emotional health of children 0 - 17 years old in the United States. Since 2016,
-the NSCH has been an annual survey.
+and state-level data on the physical and emotional health of children 0 - 17 years old in the United States.
 
 Survey topics include:
 
