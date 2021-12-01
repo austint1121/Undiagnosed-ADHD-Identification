@@ -101,6 +101,24 @@ undiagnosed**.
 One distinction I'd like to make: **This project is not about diagnosing kids with ADHD**. Only a trained medical
 professional can diagnose someone with ADHD. This project and it's results are about spreading awareness.
 
+# Data Understanding
+
+As mentioned above, the [NSCH](https://www.census.gov/programs-surveys/nsch/data/datasets.html) is a household survey
+that produces national and state-level data on the physical and emotional health of children 0 - 17 years old in the
+United States. It is performed by the US Census Bureau, and an extremely
+detailed [methodology report](https://www2.census.gov/programs-surveys/nsch/technical-documentation/methodology/2020-NSCH-Methodology-Report.pdf)
+is included with the data.
+
+As a Data scientist I need to ask myself:
+
+**Is this data suitable for our goal, and what kind of limitations does it have?**
+
+The most important thing about this data, is that it is representative of the population as a whole. Starting on page 8
+of the methodology report, there is a detailed explanation of the collection methods used to gather this data. In
+summary, modifications were made to this data to ensure it was representative of the overall population.
+
+Let's begin taking a look at the data, with the knowledge that it accurately represents the population as a whole.
+
 # Data Cleaning
 
 # Modeling
