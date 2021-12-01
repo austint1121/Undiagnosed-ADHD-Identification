@@ -3,6 +3,8 @@ Proposal [here](https://github.com/austint1121/Capstone_Proposal)
 
 [Project progress](https://github.com/users/austint1121/projects/1)
 
+## Data Understanding
+
 ## Goal
 In the NSCH data is a question that asks:
 - Has a doctor or other health care provider EVER told you that this child has…
@@ -18,3 +20,9 @@ The idea here being, that if the model finds many similarities between a child w
 children who **have been** diagnosed, then that child may have undiagnosed ADHD.
 
 The target audience here would be the creators/sponsors of the survey, and this would be a binary classification problem.
+
+# Data Cleaning
+
+# Modeling
+
+# Conclusion
