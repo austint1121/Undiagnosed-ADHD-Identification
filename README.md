@@ -1,5 +1,7 @@
 # Undiagnosed-ADHD-Identification
+
 by [Matthew Turner](https://www.linkedin.com/in/matthew-turner-a5649a21b/)
+
 # Summary
 
 # Introduction
@@ -84,6 +86,49 @@ As a Data scientist I need to ask myself:
 The most important thing about this data, is that it is representative of the population as a whole. Starting on page 8
 of the methodology report, there is a detailed explanation of the collection methods used to gather this data. In
 summary, modifications were made to this data to ensure it was representative of the overall population.
+
+## Exploratory Data Analysis
+
+In this [notebook](/Notebooks/EDA.ipynb) I investigate and visualize distributions and key points in my data relating to
+kids diagnosed with ADHD.
+
+The key points I found were:
+
+- There are **4306 children** in this sample have been **diagnosed** with ADHD.
+<br>
+
+- **10%** of kids in this sample have been **diagnosed** ADHD.
+<br>
+
+- Of these kids, **69% are male**, and **31% are female**
+<br>
+
+- of the kids diagnosed with ADHD,
+
+  - **61%** are between the ages of **12-17**
+  - **36%** are between the ages of **6-11**
+  - **3%** are between the ages of **0-5**
+
+- The Racial/Ethnic distribution of children with ADHD is:
+
+| Race        | Percentage  |
+| ----------- | ----------- |
+| White       | 80%         |
+| Black       | 8%          |
+| Asian       | 2%          |
+| Mixed       | 8%          |
+| Native Am.  | 0.009%      |
+| Hawaiian    | 0.006%      |
+
+<br>
+
+#### Why These Things Matter
+
+This data is important, because my model is only as good as my data. These are some clear, defined limitations of my
+data. When modeling it will be important to remember that my model will be good at diagnosing white males between the
+ages of 12-17. This is because that is what I have the most data for. My model may struggle to correctly classify
+female, or non-white kids when it comes to ADHD. It's important to be transparent about these things, and also to
+remember that using the data as it is will mean reinforcing any bias that is already present in the data.
 
 # Data Cleaning
 
