@@ -200,6 +200,7 @@ correct 50% of the time**.
 The final model has a **recall of 0.86** —in other words, **it correctly identifies 86% of all children diagnosed with
 ADHD**.
 
+![Final Matrix](Images/final_matrix.png)
 # Conclusion
 
 This final model could be used with the survey each year, and the kids who the model flagged as having a high chance of
