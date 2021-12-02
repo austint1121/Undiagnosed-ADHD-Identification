@@ -15,7 +15,39 @@ In the NSCH survey data is a question that asks:
 In this project, I create a tool that can give the probability that a child from the NSCH survey has ADHD, **but is
 undiagnosed**.
 
-My [final model](Notebooks/Modeling-Catboost-Tuning.ipynb) is a Catboost model optimized on Recall and AUC score.
+I performed exploratory data analysis to find the limitations of the data, and I found that:
+
+- There are **4306 children** in this sample have been **diagnosed** with ADHD.
+  <br>
+
+- **10%** of kids in this sample have been **diagnosed** ADHD.
+  <br>
+
+- Of these kids, **69% are male**, and **31% are female**
+  <br>
+
+- of the kids diagnosed with ADHD,
+
+  - **61%** are between the ages of **12-17**
+  - **36%** are between the ages of **6-11**
+  - **3%** are between the ages of **0-5**
+
+- The Racial/Ethnic distribution of children with ADHD is:
+
+| Race        | Percentage  |
+| ----------- | ----------- |
+| White       | 80%         |
+| Black       | 8%          |
+| Asian       | 2%          |
+| Mixed       | 8%          |
+| Native Am.  | 0.009%      |
+| Hawaiian    | 0.006%      |
+
+<br>
+
+After exploring the data and getting an understanding of the distributions I cleaned the data and moved onto modeling.
+
+My [model](Notebooks/Modeling-Catboost-Tuning.ipynb) is a Catboost model optimized on Recall and AUC score.
 
 - **Recall** because I don’t want the model to be missing kids that may have, potentially, already been passed
   over/ignored by doctors.
