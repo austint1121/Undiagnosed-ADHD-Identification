@@ -67,7 +67,7 @@ undiagnosed ADHD would then have an email sent to their primary caregiver. The e
 shows many similarities with those who have been diagnosed with ADHD. Resources for ADHD and recommendations on next
 steps could be included in the email as well.
 
-Please see the [project notebook](Undiagnosed-ADHD-Classification.ipynb) for a full walk through of the data science
+Please see the [project notebook](ADHD_Classification.ipynb) for a full walk through of the data science
 process throughout the entire project.
 
 # Introduction

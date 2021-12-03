@@ -1,20 +1,25 @@
 from sklearn.metrics import accuracy_score, recall_score, f1_score, roc_auc_score, precision_score
+import pandas as pd
 
-
-def metrics(y_test, predictions):
+def metrics(X_test, y_test, model):
     """
-    Takes the test labels and a model's predictions
-    of the labels and prints the accuracy, recall, f1, and roc auc score.
+    Takes the features and labels and uses a model to make predictions. Then prints and returns the accuracy, recall,
+     f1, and roc auc score.
+    :param X_test: Features
     :param y_test: True labels
-    :param predictions: Predicted Labels
+    :param model: Model to make predictions with
     :return: Dictionary of scores for accuracy, recall, f2, and roc auc.
     """
+
+    probas = model.predict_proba(X_test)
+    probas = pd.DataFrame(probas)
+    probas_dropped = probas.drop(columns=0)
     results = {
-        'Accuracy': accuracy_score(y_test, predictions),
-        'Precision': precision_score(y_test, predictions),
-        'Recall': recall_score(y_test, predictions),
-        'F1': f1_score(y_test, predictions),
-        'ROCAUC': roc_auc_score(y_test, predictions)
+        'Accuracy': accuracy_score(y_test, model.predict(X_test)),
+        'Precision': precision_score(y_test, model.predict(X_test)),
+        'Recall': recall_score(y_test, model.predict(X_test)),
+        'F1': f1_score(y_test, model.predict(X_test)),
+        'ROCAUC': roc_auc_score(y_test, probas_dropped)
 
     }
     print('Model Results')
