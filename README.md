@@ -47,7 +47,7 @@ I performed exploratory data analysis to find the limitations of the data, and I
 
 After exploring the data and getting an understanding of the distributions I cleaned the data and moved onto modeling.
 
-My [model](Notebooks/Modeling-Catboost-Tuning.ipynb) is a Catboost model optimized on Recall and AUC score.
+My [model](Notebooks/Modeling/Modeling-Catboost-Tuning.ipynb) is a Catboost model optimized on Recall and AUC score.
 
 - **Recall** because I don’t want the model to be missing kids that may have, potentially, already been passed
   over/ignored by doctors.
@@ -202,9 +202,9 @@ The full data cleaning notebook can be found [here](/Notebooks/Data_Cleaning.ipy
 
 # Modeling
 
-I created 3 different types of models: [Sklearn decision tree](Notebooks/Modeling-Decision_Tree.ipynb)
-, [Catboost](Notebooks/Modeling-Catboost.ipynb), and a [Keras neural network](Notebooks/Modeling-Keras.ipynb).
-My [final model](Notebooks/Modeling-Catboost-Tuning.ipynb) is a Catboost model.
+I created 3 different types of models: [Sklearn decision tree](Notebooks/Modeling/Modeling-Decision_Tree.ipynb)
+, [Catboost](Notebooks/Modeling/Modeling-Catboost.ipynb), and a [Keras neural network](Notebooks/Modeling/Modeling-Keras.ipynb).
+My [final model](Notebooks/Modeling/Modeling-Catboost-Tuning.ipynb) is a Catboost model.
 
 For each model type, created a first simple model, and iterated from it, attempting to optimize the Recall and AUC
 scores.
