@@ -135,3 +135,31 @@ I've shown that it's possible to use machine learning to accurately identify kid
 shown it's possible to do this with just survey data, and if you can identify ADHD using survey data, it could be
 possible to identify other conditions, like depression, anxiety, and autism as well. If this were to be deployed, it
 could serve as a tool for those seeking answers, but unable to see a doctor to get an offical diagnoses.
+
+# Repository Structure
+
+```
+├── Images                              <- Directory containing graphs and images from notebooks and presentation
+│   └── ...
+│
+├── Model                               <- Directory containing the final model in cbm format
+│   └── final_model.cbm
+│
+├── Notebooks                           <- Directory of detailed walkthroughs of project in Jupyter notebooks.
+│   │
+│   ├── Modeling                        <- Directory containing all Notebooks related to the modeling process.
+│   │   └── ...
+│   ├── Data_Cleaning.ipynb             <- Detailed narrative walkthrough of data cleaning proccess.
+│   │ 
+│   └── EDA.ipynb                       <- Detailed narrative walkthrough of exploratory data analysis.
+│       
+├── ADHD_Classification.ipynb           <- Narrative summary of project in Jupyter notebook.
+│ 
+├── README.md                           <- Top-level README.
+│ 
+├── functions.py                        <- Helper functions for all Jupyter notebooks.
+│ 
+├── environment.yml                     <- The YML file for reproducing analysis environment.
+│ 
+└── presentation.pdf                    <- PDF version of project presentation.
+``` 
