@@ -1,6 +1,5 @@
 # Undiagnosed-ADHD-Identification
-
-by [Matthew Turner](https://www.linkedin.com/in/matthew-turner-a5649a21b/)
+<img src="Images/title_card.jpg" width="100%" height="50%">
 
 # Summary
 
@@ -15,7 +14,6 @@ In the NSCH survey data is a question that asks:
 In this project, I create a tool that can give the probability that a child from the NSCH survey has ADHD, **but is
 undiagnosed**.
 <br>
-
 
 The final model has an **accuracy of 0.90** -in other words, **the model correctly classifies if a child is diagnosed
 with ADHD 90% of the time**
@@ -87,7 +85,7 @@ professional can diagnose someone with ADHD. This project and it's results are a
 # Data Cleaning
 
 The Data file can specifically be found [here](https://www.census.gov/programs-surveys/nsch/data/datasets.html). Data in
-this project is the SAS data file from 2020, 2019, 2018.
+this project is the SAS data files from 2020, 2019, 2018.
 
 To prepare the data for cleaning I:
 
@@ -125,7 +123,7 @@ with ADHD 90% of the time**
 The final model has a **precision of 0.50** —in other words, **when it predicts a child is diagnosed with ADHD, it is
 correct 50% of the time**.
 
-The final model has a **recall of 0.90** —in other words, **it correctly identifies 86% of all children diagnosed with
+The final model has a **recall of 0.90** —in other words, **it correctly identifies 90% of all children diagnosed with
 ADHD**.
 
 ![Final Matrix](Images/final_matrix.png)
