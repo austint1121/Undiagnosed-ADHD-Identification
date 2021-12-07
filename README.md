@@ -132,7 +132,10 @@ ADHD**.
 I've shown that it's possible to use machine learning to accurately identify kids with ADHD. Not only this, but I've
 shown it's possible to do this with just survey data, and if you can identify ADHD using survey data, it could be
 possible to identify other conditions, like depression, anxiety, and autism as well. If this were to be deployed, it
-could serve as a tool for those seeking answers, but unable to see a doctor to get an offical diagnoses.
+could serve as a tool for those seeking answers, but unable to see a doctor to get an official diagnoses.
+
+For a full narrative walk through and summary of all notebooks please see
+the [ADHD Classification](ADHD_Classification.ipynb) notebook, or see my [presentation](presentation.pdf)
 
 # Repository Structure
 
