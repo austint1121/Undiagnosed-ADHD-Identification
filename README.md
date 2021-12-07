@@ -56,16 +56,7 @@ suspect you have it, you may never bring it up to your doctor on your own.
 
 **The way ADHD is portrayed**
 People with ADHD are typically portrayed as young kids, who are extremely hyper-active and disobedient. However,
-hyperactivity is only one component of ADHD, and it expresses itself in various ways. Especially as kids grow older,
-hyperactivity can [look very different](https://www.nytimes.com/2010/12/14/health/14klass.html) from what is portrayed
-in media/pop culture.
-
-So, is there a solution that can be reliably used that **doesn't require a deep understanding of ADHD**, and could help
-spread awareness that a person may have ADHD regardless of any **personal** or **societal** bias towards what ADHD looks
-like? If our hypothetical solution also used **real data** from those diagnosed with ADHD, it would definitely give it
-more weight as a solution.
-
-But does a data source like that even exist?
+hyperactivity is only one component of ADHD, and it expresses itself in various ways.
 
 # Goal
 The [NSCH](https://www.census.gov/programs-surveys/nsch/data/datasets.html) is a household survey that produces national
@@ -104,10 +95,6 @@ My [final model](Notebooks/Modeling/Modeling-Catboost-Tuning.ipynb) is a Catboos
 
 For each model type, created a first simple model, and iterated from it, attempting to optimize the Recall and AUC
 scores.
-
-- **Recall** because I don’t want the model to be missing kids that may have, potentially, already been passed
-  over/ignored by doctors.
-- AUC as a more general overview to how my model is doing
 
 # Results
 
